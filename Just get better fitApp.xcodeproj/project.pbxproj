@@ -38,6 +38,9 @@
 		F15A40741E0718B600333FD8 /* Just get better fitAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Just get better fitAppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F15A40781E0718B600333FD8 /* Just_get_better_fitAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Just_get_better_fitAppTests.swift; sourceTree = "<group>"; };
 		F15A407A1E0718B600333FD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F15A40841E071E5300333FD8 /* ArchitectsDaughter.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ArchitectsDaughter.ttf; sourceTree = "<group>"; };
+		F15A40851E07221000333FD8 /* waltograph42.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = waltograph42.otf; sourceTree = "<group>"; };
+		F15A40861E07221000333FD8 /* waltographUI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = waltographUI.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,7 @@
 		F15A40601E0718B600333FD8 /* Just get better fitApp */ = {
 			isa = PBXGroup;
 			children = (
+				F15A40831E071E3000333FD8 /* fonts */,
 				F15A40611E0718B600333FD8 /* AppDelegate.swift */,
 				F15A40631E0718B600333FD8 /* FirstViewController.swift */,
 				F15A40651E0718B600333FD8 /* SecondViewController.swift */,
@@ -97,6 +101,16 @@
 				F15A407A1E0718B600333FD8 /* Info.plist */,
 			);
 			path = "Just get better fitAppTests";
+			sourceTree = "<group>";
+		};
+		F15A40831E071E3000333FD8 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F15A40851E07221000333FD8 /* waltograph42.otf */,
+				F15A40861E07221000333FD8 /* waltographUI.ttf */,
+				F15A40841E071E5300333FD8 /* ArchitectsDaughter.ttf */,
+			);
+			name = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
