@@ -9,13 +9,14 @@
 import UIKit
 import Social
 
-class FirstViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIDocumentInteractionControllerDelegate {
+class FirstViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIDocumentInteractionControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
   
   let imagePicker = UIImagePickerController()
   var imagePicked = false
   var shareNetwork = ""
   var docController = UIDocumentInteractionController()
+  var workouts : [Workout] = [Workout]()
   @IBOutlet weak var collectionView: UICollectionView!
   @IBOutlet weak var dailyBountyLabel: UILabel!
   @IBOutlet weak var profileImageView: UIImageView!
@@ -24,6 +25,7 @@ class FirstViewController: UIViewController, UIImagePickerControllerDelegate, UI
   override func viewDidLoad() {
     super.viewDidLoad()
     imagePicker.delegate = self
+    initialiseData()
   }
 
   override func didReceiveMemoryWarning() {
@@ -128,6 +130,39 @@ class FirstViewController: UIViewController, UIImagePickerControllerDelegate, UI
       } catch let error {
         print("\(error.localizedDescription)")
       }
+    }
+  }
+  
+  // MARK - collectionView
+  
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return workouts.count
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! WorkoutCollectionViewCell
+    
+    
+    // furnish cell TODO
+    
+    cell.update(wkout: workouts[indexPath.row])
+    return cell
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    print(" tapped \(workouts[indexPath.row])")
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    let height = collectionView.frame.height * 0.95
+    return CGSize(width: height, height: height)
+  }
+  
+  // MARK - get data
+  
+  func initialiseData() {
+    if let wkouts = Data().getWorkoutsFromServer() {
+      self.workouts = wkouts
     }
   }
   

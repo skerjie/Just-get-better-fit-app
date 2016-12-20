@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,25 +24,99 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PVV-Ld-DSO">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PVV-Ld-DSO">
                                 <rect key="frame" x="0.0" y="35" width="375" height="220"/>
                                 <color key="backgroundColor" red="0.58833994441818327" green="1" blue="0.48643568386397151" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cfH-L4-2i7">
-                                    <size key="itemSize" width="50" height="50"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cfH-L4-2i7">
+                                    <size key="itemSize" width="164" height="188"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="e3N-8O-ikp">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="e3N-8O-ikp" customClass="WorkoutCollectionViewCell" customModule="Just_get_better_fitApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-9" width="164" height="188"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="164" height="188"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="zQY-P0-vph">
+                                                    <rect key="frame" x="1" y="-12" width="189" height="207"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0wq-LP-ecC">
+                                                            <rect key="frame" x="0.0" y="0.0" width="148" height="86"/>
+                                                            <color key="backgroundColor" red="1" green="0.88533241548794706" blue="0.20737863450203753" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout program from skrj aka Andrey Polonskiy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eox-ZH-YSb">
+                                                            <rect key="frame" x="0.0" y="89" width="148" height="20"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="QMX-ZK-uaU">
+                                                            <rect key="frame" x="0.0" y="112" width="148" height="60"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="fist" translatesAutoresizingMaskIntoConstraints="NO" id="49G-92-9XX">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="22" height="60"/>
+                                                                </imageView>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="fist" translatesAutoresizingMaskIntoConstraints="NO" id="L4n-zN-YKF">
+                                                                    <rect key="frame" x="25" y="0.0" width="22.5" height="60"/>
+                                                                </imageView>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="fist" translatesAutoresizingMaskIntoConstraints="NO" id="1Wu-BE-RnE">
+                                                                    <rect key="frame" x="50.5" y="0.0" width="22" height="60"/>
+                                                                </imageView>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="fist" translatesAutoresizingMaskIntoConstraints="NO" id="ZFU-Aq-1VC">
+                                                                    <rect key="frame" x="75.5" y="0.0" width="22" height="60"/>
+                                                                </imageView>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="fist" translatesAutoresizingMaskIntoConstraints="NO" id="jdT-LG-BNg">
+                                                                    <rect key="frame" x="100.5" y="0.0" width="22.5" height="60"/>
+                                                                </imageView>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="fist" translatesAutoresizingMaskIntoConstraints="NO" id="5ZV-L3-sAq">
+                                                                    <rect key="frame" x="126" y="0.0" width="22" height="60"/>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="49G-92-9XX" firstAttribute="height" secondItem="QMX-ZK-uaU" secondAttribute="height" id="eZL-uN-eB8"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="0wq-LP-ecC" firstAttribute="height" secondItem="zQY-P0-vph" secondAttribute="height" multiplier="0.5" id="5Tg-hG-2no"/>
+                                                        <constraint firstAttribute="trailing" secondItem="QMX-ZK-uaU" secondAttribute="trailing" id="624-Qn-d7E"/>
+                                                        <constraint firstItem="QMX-ZK-uaU" firstAttribute="leading" secondItem="zQY-P0-vph" secondAttribute="leading" id="8nW-y7-b0n"/>
+                                                        <constraint firstItem="eox-ZH-YSb" firstAttribute="leading" secondItem="zQY-P0-vph" secondAttribute="leading" id="IRY-ff-xMu"/>
+                                                        <constraint firstAttribute="bottom" secondItem="QMX-ZK-uaU" secondAttribute="bottom" id="K0w-Dd-aVK"/>
+                                                        <constraint firstItem="0wq-LP-ecC" firstAttribute="leading" secondItem="zQY-P0-vph" secondAttribute="leading" id="VDo-Li-HAx"/>
+                                                        <constraint firstAttribute="trailing" secondItem="eox-ZH-YSb" secondAttribute="trailing" id="gle-nY-Nh4"/>
+                                                        <constraint firstItem="QMX-ZK-uaU" firstAttribute="height" secondItem="zQY-P0-vph" secondAttribute="height" multiplier="0.35" id="l11-ne-KGU"/>
+                                                        <constraint firstAttribute="trailing" secondItem="0wq-LP-ecC" secondAttribute="trailing" id="mZm-xN-Xoe"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="zQY-P0-vph" firstAttribute="leading" secondItem="e3N-8O-ikp" secondAttribute="leadingMargin" id="34j-kj-E2s"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="zQY-P0-vph" secondAttribute="trailing" id="UKu-lC-LzC"/>
+                                            <constraint firstItem="zQY-P0-vph" firstAttribute="top" secondItem="e3N-8O-ikp" secondAttribute="topMargin" id="be7-Ut-7HV"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="zQY-P0-vph" secondAttribute="bottom" id="sMK-M6-XfY"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="fistImage1" destination="49G-92-9XX" id="kOS-z7-hze"/>
+                                            <outlet property="fistImage2" destination="L4n-zN-YKF" id="cRl-HT-1UF"/>
+                                            <outlet property="fistImage3" destination="1Wu-BE-RnE" id="1Sh-5b-AGt"/>
+                                            <outlet property="fistImage4" destination="ZFU-Aq-1VC" id="qlv-TT-tEb"/>
+                                            <outlet property="fistImage5" destination="jdT-LG-BNg" id="Au0-Tc-4ea"/>
+                                            <outlet property="fistImage6" destination="5ZV-L3-sAq" id="ytT-GP-ccJ"/>
+                                            <outlet property="workoutImageView" destination="0wq-LP-ecC" id="4sx-3e-ooV"/>
+                                            <outlet property="workoutNameLabel" destination="eox-ZH-YSb" id="BfI-gP-zXP"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="ZsM-ZI-GWi"/>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="F4h-AE-9FL"/>
+                                </connections>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="trN-jf-Fdp">
                                 <rect key="frame" x="0.0" y="255" width="375" height="143"/>
@@ -61,15 +136,20 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="CWn-1L-amQ" secondAttribute="height" multiplier="143:143" id="eUT-oP-eLX"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="34"/>
                                                 <state key="normal" title="Collect!">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="workoutStartButtonTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="vII-OT-2iY"/>
+                                                    <segue destination="UXP-Zu-ArP" kind="presentation" id="f3w-ok-uc0"/>
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="CWn-1L-amQ" secondAttribute="bottom" id="1bk-YI-IcT"/>
+                                            <constraint firstItem="CWn-1L-amQ" firstAttribute="top" secondItem="WnD-bw-SQC" secondAttribute="top" id="Sjt-tO-Nbc"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.58887357376206906" blue="0.17382289170251042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -178,7 +258,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+            <point key="canvasLocation" x="788" y="-322.48875562218893"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9QV-jy-GIz">
+            <objects>
+                <viewController id="UXP-Zu-ArP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZZf-yT-cbk"/>
+                        <viewControllerLayoutGuide type="bottom" id="JBs-RP-Ler"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4t6-tq-ge6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3jC-y7-c0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1610" y="-321"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -193,14 +291,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="83" y="313" width="209.5" height="41.5"/>
+                                <rect key="frame" x="82.5" y="312.5" width="210" height="42"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="80" y="362.5" width="215" height="17"/>
+                                <rect key="frame" x="79.5" y="362.5" width="215" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -218,7 +316,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="788" y="357"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -243,6 +341,7 @@
     <resources>
         <image name="facebook" width="64" height="64"/>
         <image name="first" width="30" height="30"/>
+        <image name="fist" width="120" height="151"/>
         <image name="instagram" width="64" height="64"/>
         <image name="second" width="30" height="30"/>
         <image name="twitter" width="64" height="64"/>
