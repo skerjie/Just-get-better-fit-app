@@ -27,7 +27,7 @@ class Data {
   // get test workout(data)
   func _testDummyWorkout() -> Workout{
     let name = "workout1"
-    let imageUrl = URL(string: "http://www.learnappdevelopment.com/image.jpg")!
+    let imageUrl = URL(string: "https://httpbin.org/image/png")!
     let desc = "Description"
     let note = "Test note for an exercise"
     let author = "skrj"
@@ -35,7 +35,7 @@ class Data {
     
     let excersise = ["Pushups" : [[1,20], [2,20], [3,17], [4, 20]] ]
     
-    let wkout1 = Workout(name: name, imgUrl: imageUrl, diff: diff, note: note, desc: desc, author: author, exercises: excersise)
+    let wkout1 = Workout(name: name, imgUrl: imageUrl, diff: diff, note: note, desc: desc, author: author, bounty: 10, exercises: excersise)
     
     return wkout1
     

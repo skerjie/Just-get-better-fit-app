@@ -15,7 +15,7 @@
         <!--First-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Just_get_better_fitApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="JustGetBetterFitAppTests" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -26,7 +26,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PVV-Ld-DSO">
                                 <rect key="frame" x="0.0" y="35" width="375" height="220"/>
-                                <color key="backgroundColor" red="0.58833994441818327" green="1" blue="0.48643568386397151" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cfH-L4-2i7">
                                     <size key="itemSize" width="164" height="188"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -34,7 +34,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="e3N-8O-ikp" customClass="WorkoutCollectionViewCell" customModule="Just_get_better_fitApp" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="e3N-8O-ikp" customClass="WorkoutCollectionViewCell" customModule="JustGetBetterFitAppTests" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="-9" width="164" height="188"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -44,9 +44,8 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="zQY-P0-vph">
                                                     <rect key="frame" x="1" y="-12" width="189" height="207"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0wq-LP-ecC">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultWorkout" translatesAutoresizingMaskIntoConstraints="NO" id="0wq-LP-ecC">
                                                             <rect key="frame" x="0.0" y="0.0" width="148" height="86"/>
-                                                            <color key="backgroundColor" red="1" green="0.88533241548794706" blue="0.20737863450203753" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout program from skrj aka Andrey Polonskiy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eox-ZH-YSb">
                                                             <rect key="frame" x="0.0" y="89" width="148" height="20"/>
@@ -124,13 +123,24 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="WnD-bw-SQC">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="143"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bounty ready! 500 c" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kq0-Fz-650">
-                                                <rect key="frame" x="0.0" y="58" width="227" height="27"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="23"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWn-1L-amQ">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Eh9-mC-Hnu">
+                                                <rect key="frame" x="0.0" y="21" width="227" height="101"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Workout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kq0-Fz-650">
+                                                        <rect key="frame" x="0.0" y="0.0" width="227" height="27"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="23"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6B-7H-MrT">
+                                                        <rect key="frame" x="0.0" y="42" width="227" height="59"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="50"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWn-1L-amQ">
                                                 <rect key="frame" x="232" y="0.0" width="143" height="143"/>
                                                 <color key="backgroundColor" red="0.082304366572520382" green="1" blue="0.12731237612362012" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -149,6 +159,7 @@
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="CWn-1L-amQ" secondAttribute="bottom" id="1bk-YI-IcT"/>
                                             <constraint firstItem="CWn-1L-amQ" firstAttribute="top" secondItem="WnD-bw-SQC" secondAttribute="top" id="Sjt-tO-Nbc"/>
+                                            <constraint firstItem="Eh9-mC-Hnu" firstAttribute="leading" secondItem="WnD-bw-SQC" secondAttribute="leading" id="h9M-61-gHj"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -250,6 +261,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="bountyLabel" destination="b6B-7H-MrT" id="ArC-Oq-2dW"/>
+                        <outlet property="collectButton" destination="CWn-1L-amQ" id="nxu-NA-Iqq"/>
                         <outlet property="collectionView" destination="PVV-Ld-DSO" id="Rnw-Hp-Vh1"/>
                         <outlet property="dailyBountyLabel" destination="Kq0-Fz-650" id="5L7-at-mqy"/>
                         <outlet property="profileImageView" destination="Ucm-dg-7iQ" id="Rt7-nF-p4O"/>
@@ -260,10 +273,10 @@
             </objects>
             <point key="canvasLocation" x="788" y="-322.48875562218893"/>
         </scene>
-        <!--View Controller-->
+        <!--Do Workout View Controller-->
         <scene sceneID="9QV-jy-GIz">
             <objects>
-                <viewController id="UXP-Zu-ArP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="doWorkoutViewController" id="UXP-Zu-ArP" customClass="DoWorkoutViewController" customModule="JustGetBetterFitAppTests" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZZf-yT-cbk"/>
                         <viewControllerLayoutGuide type="bottom" id="JBs-RP-Ler"/>
@@ -281,7 +294,7 @@
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Just_get_better_fitApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="JustGetBetterFitAppTests" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -339,6 +352,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="defaultWorkout" width="324" height="156"/>
         <image name="facebook" width="64" height="64"/>
         <image name="first" width="30" height="30"/>
         <image name="fist" width="120" height="151"/>

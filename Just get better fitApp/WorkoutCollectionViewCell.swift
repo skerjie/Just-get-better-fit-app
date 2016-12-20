@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AlamofireImage
+import Alamofire
 
 class WorkoutCollectionViewCell: UICollectionViewCell {
     
@@ -22,8 +24,22 @@ class WorkoutCollectionViewCell: UICollectionViewCell {
   func update(wkout: Workout) {
     var diff = wkout.difficulty
     setFists(i: diff!)
-    workoutImageView.image = UIImage(named: "defaultWorkout")
+    //workoutImageView.image = UIImage(named: "defaultWorkout")
     workoutNameLabel.text = wkout.name + ". " + wkout.author
+    
+    
+    Alamofire.request(wkout.imgUrl!.absoluteString).responseImage { response in
+      debugPrint(response)
+      
+      print(response.request)
+      print(response.response)
+      debugPrint(response.result)
+      
+      if let image = response.result.value {
+        print("image downloaded: \(image)")
+        self.workoutImageView.image = image
+      }
+    }
     
   }
   

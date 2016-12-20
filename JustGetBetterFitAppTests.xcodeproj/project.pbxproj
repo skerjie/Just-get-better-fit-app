@@ -20,6 +20,7 @@
 		F17F6BD51E0931960068C126 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17F6BD41E0931960068C126 /* Workout.swift */; };
 		F17F6BD81E09435D0068C126 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17F6BD71E09435D0068C126 /* Data.swift */; };
 		F17F6BDA1E0944450068C126 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17F6BD91E0944450068C126 /* Utilities.swift */; };
+		F1B5C1BB1E099C240018596C /* DoWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B5C1BA1E099C240018596C /* DoWorkoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		F17F6BD41E0931960068C126 /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		F17F6BD71E09435D0068C126 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		F17F6BD91E0944450068C126 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		F1B5C1BA1E099C240018596C /* DoWorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoWorkoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				F15A40651E0718B600333FD8 /* SecondViewController.swift */,
 				F17F6BD41E0931960068C126 /* Workout.swift */,
 				F17F6BD21E0915BC0068C126 /* WorkoutCollectionViewCell.swift */,
+				F1B5C1BA1E099C240018596C /* DoWorkoutViewController.swift */,
 				F17F6BD91E0944450068C126 /* Utilities.swift */,
 				F15A40671E0718B600333FD8 /* Main.storyboard */,
 				F15A406A1E0718B600333FD8 /* Assets.xcassets */,
@@ -375,6 +378,7 @@
 				F17F6BDA1E0944450068C126 /* Utilities.swift in Sources */,
 				F15A40661E0718B600333FD8 /* SecondViewController.swift in Sources */,
 				F15A40621E0718B600333FD8 /* AppDelegate.swift in Sources */,
+				F1B5C1BB1E099C240018596C /* DoWorkoutViewController.swift in Sources */,
 				F17F6BD51E0931960068C126 /* Workout.swift in Sources */,
 				F15A40641E0718B600333FD8 /* FirstViewController.swift in Sources */,
 			);

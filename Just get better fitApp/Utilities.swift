@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Utilities {
   func getStorage() -> UserDefaults {
@@ -28,6 +29,8 @@ class Utilities {
       return diff
     }
   }
+  
+  var green : UIColor = UIColor(red: 150/255, green: 219/255, blue: 55/255, alpha: 0.5)
 
 }
 

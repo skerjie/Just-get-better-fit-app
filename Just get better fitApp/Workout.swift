@@ -16,18 +16,20 @@ struct Workout {
   var note : String!
   var description : String!
   var author : String!
+  var bounty : Int!
   
   var exercises : [String : [[Int]] ]!
   // var set : [Int : Int]?
   
-  init(name: String, imgUrl : URL, diff: Int, note: String, desc: String, author : String, exercises: [String : [[Int]] ]) {
+  init(name: String, imgUrl : URL, diff: Int, note: String, desc: String, author : String, bounty: Int, exercises: [String : [[Int]] ]) {
     self.name = name
     self.imgUrl = imgUrl
     self.difficulty = diff
     self.note = note
     self.description = desc
     self.author = author
+    self.bounty = bounty
     self.exercises = exercises
   }
-  
+
 }

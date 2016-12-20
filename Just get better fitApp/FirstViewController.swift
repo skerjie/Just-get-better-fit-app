@@ -17,10 +17,13 @@ class FirstViewController: UIViewController, UIImagePickerControllerDelegate, UI
   var shareNetwork = ""
   var docController = UIDocumentInteractionController()
   var workouts : [Workout] = [Workout]()
+  var selectedWorkout : Workout?
   @IBOutlet weak var collectionView: UICollectionView!
   @IBOutlet weak var dailyBountyLabel: UILabel!
   @IBOutlet weak var profileImageView: UIImageView!
+  @IBOutlet weak var collectButton: UIButton!
   @IBOutlet weak var totalEndorfinsEarnLabel: UILabel!
+  @IBOutlet weak var bountyLabel: UILabel!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -33,6 +36,12 @@ class FirstViewController: UIViewController, UIImagePickerControllerDelegate, UI
     // Dispose of any resources that can be recreated.
   }
 
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if let destVC = segue.destination as? DoWorkoutViewController {
+      destVC.workout = selectedWorkout
+    }
+  }
+  
   @IBAction func workoutStartButtonTapped(_ sender: UIButton) {
   }
   
@@ -151,6 +160,25 @@ class FirstViewController: UIViewController, UIImagePickerControllerDelegate, UI
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     print(" tapped \(workouts[indexPath.row])")
+    collectButton.isEnabled = true
+    var cell = collectionView.cellForItem(at: indexPath)
+    let bgColor = Utilities().green
+    UIView.animate(withDuration: 0.4, animations: {
+      cell?.backgroundColor = bgColor
+    }) { (Bool) in
+      cell?.backgroundColor = UIColor.white
+    }
+    
+    
+    selectedWorkout = workouts[indexPath.row]
+    loadWorkout()
+  }
+  
+  
+  // loads workout into class var and collect / bounty view
+  func loadWorkout() {
+    dailyBountyLabel.text = (selectedWorkout?.name)!
+    bountyLabel.text = String(describing: (selectedWorkout?.bounty)!) + " E"
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
