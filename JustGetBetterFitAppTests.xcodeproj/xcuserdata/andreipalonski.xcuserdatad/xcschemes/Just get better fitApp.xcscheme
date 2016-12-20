@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F15A405D1E0718B600333FD8"
-               BuildableName = "Just get better fitApp.app"
-               BlueprintName = "Just get better fitApp"
-               ReferencedContainer = "container:Just get better fitApp.xcodeproj">
+               BuildableName = "JustGetBetterFitAppTests.app"
+               BlueprintName = "JustGetBetterFitAppTests"
+               ReferencedContainer = "container:JustGetBetterFitAppTests.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F15A40731E0718B600333FD8"
-               BuildableName = "Just get better fitAppTests.xctest"
-               BlueprintName = "Just get better fitAppTests"
-               ReferencedContainer = "container:Just get better fitApp.xcodeproj">
+               BuildableName = "JustGetBetterFitAppTestsTests.xctest"
+               BlueprintName = "JustGetBetterFitAppTestsTests"
+               ReferencedContainer = "container:JustGetBetterFitAppTests.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F15A405D1E0718B600333FD8"
-            BuildableName = "Just get better fitApp.app"
-            BlueprintName = "Just get better fitApp"
-            ReferencedContainer = "container:Just get better fitApp.xcodeproj">
+            BuildableName = "JustGetBetterFitAppTests.app"
+            BlueprintName = "JustGetBetterFitAppTests"
+            ReferencedContainer = "container:JustGetBetterFitAppTests.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F15A405D1E0718B600333FD8"
-            BuildableName = "Just get better fitApp.app"
-            BlueprintName = "Just get better fitApp"
-            ReferencedContainer = "container:Just get better fitApp.xcodeproj">
+            BuildableName = "JustGetBetterFitAppTests.app"
+            BlueprintName = "JustGetBetterFitAppTests"
+            ReferencedContainer = "container:JustGetBetterFitAppTests.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -85,9 +85,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F15A405D1E0718B600333FD8"
-            BuildableName = "Just get better fitApp.app"
-            BlueprintName = "Just get better fitApp"
-            ReferencedContainer = "container:Just get better fitApp.xcodeproj">
+            BuildableName = "JustGetBetterFitAppTests.app"
+            BlueprintName = "JustGetBetterFitAppTests"
+            ReferencedContainer = "container:JustGetBetterFitAppTests.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
