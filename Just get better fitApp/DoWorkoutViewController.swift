@@ -10,6 +10,12 @@ import UIKit
 
 class DoWorkoutViewController: UIViewController {
 
+  @IBOutlet weak var numberOfRepsLabel: UILabel!
+  @IBOutlet weak var numberOfSetsLabel: UILabel!
+  @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var workoutImageView: UIImageView!
+  @IBOutlet weak var workoutNameLabel: UILabel!
+  @IBOutlet weak var doneBtn: UIButton!
   var workout : Workout!
   
     override func viewDidLoad() {
@@ -23,6 +29,8 @@ class DoWorkoutViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+  @IBAction func markDoneBtnTapped(_ sender: UIButton) {
+  }
 
     /*
     // MARK: - Navigation
